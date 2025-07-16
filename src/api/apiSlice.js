@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: import.meta.env.VITE_API_BASE_URL || 'https://booklend-backend-1.onrender.com/api/',
+  baseUrl: 'https://booklend-backend-1.onrender.com/api/',
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token;
     if (token) {
